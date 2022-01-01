@@ -1,14 +1,21 @@
 #include "color.h"
 #include "vec3.h"
+#include "ray.h"
 
 #include <iostream>
+
+color ray_color(const ray& r) {
+    vec3 unit_direction = unit_vector(r.direction());
+    auto t  = 0.5*(unit_direction.y() + 1.0);
+    return (1.0 - t)*color(1.0, 1.0, 1.0) + t*color(0.5, 0.7, 1.0);
+}
 
 int main() {
 
     // Image
-
-    const int image_width = 256;
-    const int image_height = 256;
+    const auto aspect_ratio = 16.0 / 9.0;
+    const int image_width = 400;
+    const int image_height = static_cast<int>(image_width / aspect_ratio);
 
     // Render
 

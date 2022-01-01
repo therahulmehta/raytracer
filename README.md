@@ -9,6 +9,7 @@ So far I've setup the primitives for creating the ray vectors, the next step is 
 
 # Files
 
-main.cpp -> Currently a file to test the header files and render gradients. 
-color.h -> Currently simply renders pixels to ostream out.
-vec3.h -> 3D vector support functions and inline functions.
+main.cpp -> Currently a file to test the header files and render gradients. <br>
+color.h -> Currently simply renders pixels to ostream out. <br>
+vec3.h -> 3D vector support functions and inline functions. <br>
+ray.h -> Defines the primatives of the ray, origin and direction.<br>
